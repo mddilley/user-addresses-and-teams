@@ -1,6 +1,8 @@
 class UsersController < ApplicationController
   def new
     @user = User.new
+    @user.addresses.build(:address_type => "Home")
+    @user.addresses.build(:address_type => "Business")
   end
 
   def create
