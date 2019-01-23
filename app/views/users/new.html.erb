@@ -17,5 +17,19 @@
     <%= address_builder.hidden_field :address_type %>
   <% end %>
 
+  <%= user_builder.fields_for :team do |team_builder| %>
+    <p><strong>Team (Name required, Hometown only required for new Teams)</strong></p>
+    <p>
+      <%= team_builder.label :name %>
+      <%= team_builder.text_field :name %>
+    </p>
+
+    <p>
+      <%= team_builder.label :hometown %>
+      <%= team_builder.text_field :hometown %>
+    </p>
+
+  <% end %>
+
   <%= user_builder.submit %>
 <% end %>
