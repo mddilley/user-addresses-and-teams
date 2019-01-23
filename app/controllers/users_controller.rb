@@ -3,6 +3,7 @@ class UsersController < ApplicationController
     @user = User.new
     @user.addresses.build(:address_type => "Home")
     @user.addresses.build(:address_type => "Business")
+    @user.addresses.build(:address_type => "Mars")
   end
 
   def create
