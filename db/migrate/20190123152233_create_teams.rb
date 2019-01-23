@@ -3,7 +3,7 @@ class CreateTeams < ActiveRecord::Migration[5.2]
     create_table :teams do |t|
       t.string :name
       t.string :hometown
-      t.timestamps
+      t.timestamps null: false
     end
   end
 end
